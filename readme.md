@@ -1,5 +1,7 @@
 # TempLatex
 
+[![codecov](https://codecov.io/gh/dataset-sh/templatex/graph/badge.svg?token=dCKh5dbR8W)](https://codecov.io/gh/dataset-sh/templatex)
+
 A jinja2 dialect for latex templating in python.
 
 ## Why not the default jinja2?
