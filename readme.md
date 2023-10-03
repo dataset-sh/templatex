@@ -9,7 +9,7 @@ brackets {} .
 
 For example, if you want to produce the following latex code:
 
-`x = \frac{-b}{c}`
+`x = \frac{b}{c}`
 
 Where b and c will be replaced by an actual number, for example: `{"b": 42, "c": 3}`. 
 
@@ -19,7 +19,7 @@ The jinja2 version will be:
 from jinja2 import Template
 
 template = """
-x = \\frac{-{{b}}}{{"{"}}{{c}}{{"}"}}
+x = \\frac{{{ b }}}{{"{"}}{{ c }}{{"}"}}
 """
 # {{"}"}} will render to }
 
@@ -42,9 +42,8 @@ In `templatex`, we can write the following code:
 from templatex import Template
 
 template = """
-x = \\frac{-@= b =@}{@= c =@}
+x = \\frac{@= b =@}{@= c =@}
 """
-# {{"}"}} will render to }
 
 data = {
     'a': 13,
